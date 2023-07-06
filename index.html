@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <h1>To-Do Website</h1>
+
+    <div class="container">
+      <div class="column">
+        <h2>To-Do</h2>
+        <div
+          id="todo-column"
+          class="task-column"
+          ondrop="drop(event, 'todo')"
+          ondragover="allowDrop(event)"
+        ></div>
+      </div>
+
+      <div class="column">
+        <h2>Current</h2>
+        <div
+          id="current-column"
+          class="task-column"
+          ondrop="drop(event, 'current')"
+          ondragover="allowDrop(event)"
+        ></div>
+      </div>
+
+      <div class="column">
+        <h2>Completed</h2>
+        <div
+          id="completed-column"
+          class="task-column"
+          ondrop="drop(event, 'completed')"
+          ondragover="allowDrop(event)"
+        ></div>
+      </div>
+    </div>
+
+    <div id="input-container">
+      <input type="text" id="task-input" placeholder="Enter task" />
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

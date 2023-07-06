@@ -67,13 +67,13 @@ function addTask() {
   taskContent.innerHTML = taskInput.value;
 
   var editButton = document.createElement("button");
-  editButton.innerHTML = "Edit";
+  editButton.innerHTML = "✎";
   editButton.onclick = function () {
     editTask(taskId);
   };
 
   var deleteButton = document.createElement("button");
-  deleteButton.innerHTML = "Delete";
+  deleteButton.innerHTML = "x";
   deleteButton.onclick = function () {
     deleteTask(taskId);
   };
@@ -131,7 +131,7 @@ function displayNotesInput(taskId) {
   notesInput.placeholder = "Enter notes";
 
   var addNotesButton = document.createElement("button");
-  addNotesButton.innerHTML = "Add";
+  addNotesButton.innerHTML = "+";
   addNotesButton.onclick = function () {
     addNotes(taskId);
   };
